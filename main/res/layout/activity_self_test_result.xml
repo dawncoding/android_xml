@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".self_test_result">
+
+    <LinearLayout
+        android:id="@+id/self_checklist_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/self_test_result_top" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_self_test"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/self_checklist_top"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/disney" />
+
+    <TextView
+        android:id="@+id/textview_self_test_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_self_test"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textSize="10sp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_self_test_result">
+
+        <com.ms.square.android.expandabletextview.ExpandableTextView
+            android:id="@+id/expandable_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:maxCollapsedLines="1"
+            app:animDuration="200">
+
+            <ImageButton
+                android:id="@+id/expand_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:src="@drawable/ic_baseline_expand_more_24"/>
+
+            <TextView
+                android:id="@+id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+        <iammert.com.expandablelib.ExpandableLayout
+            android:id="@+id/test_result_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:parentLayout="@layout/self_test_result_parent"
+            app:childLayout="@layout/self_test_result_child"
+            />
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/test_result_chekit_start_button"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="#009688"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:text="체킷 시작"/>
+
+
+
+</RelativeLayout>

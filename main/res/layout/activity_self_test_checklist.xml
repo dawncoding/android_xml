@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".self_test_checklist"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/self_test_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/self_checklist_top"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_self_test"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="18dp"
+        android:layout_below="@id/self_test_top"
+        android:src="@drawable/disney" />
+
+    <CheckBox
+        android:id="@+id/self_test_checklist_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/image_self_test"
+        android:checked="true"
+        android:text="question #1" />
+
+    <CheckBox
+        android:id="@+id/self_test_checklist_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/self_test_checklist_1"
+        android:text="question #2" />
+
+    <CheckBox
+        android:id="@+id/self_test_checklist_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/self_test_checklist_2"
+        android:text="question #3" />
+
+    <CheckBox
+        android:id="@+id/self_test_checklist_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/self_test_checklist_3"
+        android:text="question #4" />
+
+    <CheckBox
+        android:id="@+id/self_test_checklist_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/self_test_checklist_4"
+        android:text="question #5" />
+
+    <CheckBox
+        android:id="@+id/self_test_checklist_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/self_test_checklist_5"
+        android:text="question #6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/self_test_result"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="#009688"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:text="결과 확인"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".test_record_management"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/test_record_management_top" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/num2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/num1"
+        android:src="@drawable/disney" />
+
+    <ListView
+        android:id="@+id/test_record_process_listview"
+        android:layout_below="@id/num2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/test_record_process_listview"
+        android:textColor="#03A9F4"
+        android:text="cheKIT 쇼핑몰"
+        android:background="@drawable/button_style_5"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:background="#ffffff"
+        app:itemIconTint="@drawable/navigation_select_style"
+        app:itemTextColor="@drawable/navigation_select_style"
+        app:menu="@menu/main_bottom">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+
+
+</RelativeLayout>
